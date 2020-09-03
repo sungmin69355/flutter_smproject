@@ -33,13 +33,13 @@ class MyApp extends StatelessWidget {
               child: new Container(
                 child: new Center(
                     child: new Column(children: [
-                  new Padding(padding: EdgeInsets.only(top: 140.0)),
+                  new Padding(padding: EdgeInsets.only(top: 90.0)),
                   new Text(
                     '내가 너를, 너가 나를',
                     style: new TextStyle(
                         color: hexToColor("#F79919"), fontSize: 30.0),
                   ),
-                  new Padding(padding: EdgeInsets.only(top: 50.0)),
+                  new Padding(padding: EdgeInsets.only(top: 90.0)),
                   new TextFormField(
                     controller: name,
                     decoration: new InputDecoration(
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 60,
                   ),
                   new TextFormField(
                     controller: yourname,
@@ -92,17 +92,19 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 70,
                   ),
                   SizedBox(
                     child: RaisedButton(
-                      child: Text('결과를 확인해주세요'),
+                      child: Text('결과를 확인해주세요', style: TextStyle(fontSize: 24)),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Secondpage()),
                         );
                       },
+                      color: Colors.green,
+                      textColor: Colors.white,
                     ),
                   ),
                 ])),
@@ -128,7 +130,7 @@ class Secondpage extends StatelessWidget {
               child: new Container(
                 child: new Center(
                     child: new Column(children: [
-                  new Padding(padding: EdgeInsets.only(top: 140.0)),
+                  new Padding(padding: EdgeInsets.only(top: 90.0)),
                   new Text(
                     '내가 너를, 너가 나를',
                     style: new TextStyle(
@@ -149,6 +151,16 @@ class Secondpage extends StatelessWidget {
                     number.toString() + '% ',
                     style: new TextStyle(
                         color: hexToColor("#3784B6"), fontSize: 30.0),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Card(
+                    child: Image.asset(
+                      'image/good.jpg',
+                      width: 200,
+                      height: 200,
+                    ),
                   ),
                   SizedBox(
                     height: 20,
