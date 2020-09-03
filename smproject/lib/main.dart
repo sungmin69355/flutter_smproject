@@ -9,8 +9,34 @@ void main() {
   ));
 }
 
-void sum(yourname, name) {
-  print(0x1100);
+// ignore: missing_return
+Widget randomimage(int random) {
+  int point = random;
+  if (point <= 40) {
+    return new Card(
+      child: Image.asset(
+        'image/noo.jpg',
+        width: 200,
+        height: 200,
+      ),
+    );
+  } else if (point <= 70 && point >= 41) {
+    return new Card(
+      child: Image.asset(
+        'image/emm.jpg',
+        width: 200,
+        height: 200,
+      ),
+    );
+  } else if (point <= 100 && point >= 71) {
+    return new Card(
+      child: Image.asset(
+        'image/good.jpg',
+        width: 200,
+        height: 200,
+      ),
+    );
+  }
 }
 
 final yourname = TextEditingController();
@@ -33,7 +59,7 @@ class MyApp extends StatelessWidget {
               child: new Container(
                 child: new Center(
                     child: new Column(children: [
-                  new Padding(padding: EdgeInsets.only(top: 90.0)),
+                  new Padding(padding: EdgeInsets.only(top: 80.0)),
                   new Text(
                     '내가 너를, 너가 나를',
                     style: new TextStyle(
@@ -115,7 +141,7 @@ class MyApp extends StatelessWidget {
 
 // ignore: must_be_immutable
 class Secondpage extends StatelessWidget {
-  var number = Random().nextInt(100) + 1;
+  int number = Random().nextInt(100) + 1;
   @override
   Widget build(BuildContext context) {
     Color hexToColor(String code) {
@@ -130,7 +156,7 @@ class Secondpage extends StatelessWidget {
               child: new Container(
                 child: new Center(
                     child: new Column(children: [
-                  new Padding(padding: EdgeInsets.only(top: 90.0)),
+                  new Padding(padding: EdgeInsets.only(top: 70.0)),
                   new Text(
                     '내가 너를, 너가 나를',
                     style: new TextStyle(
@@ -152,18 +178,9 @@ class Secondpage extends StatelessWidget {
                     style: new TextStyle(
                         color: hexToColor("#3784B6"), fontSize: 30.0),
                   ),
+                  randomimage(number),
                   SizedBox(
-                    height: 20,
-                  ),
-                  Card(
-                    child: Image.asset(
-                      'image/good.jpg',
-                      width: 200,
-                      height: 200,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Center(
                     child: RaisedButton(
