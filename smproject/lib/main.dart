@@ -1,5 +1,5 @@
+import 'dart:html';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -7,6 +7,28 @@ void main() {
   runApp(MaterialApp(
     home: MyApp(),
   ));
+}
+
+// ignore: non_constant_identifier_names
+Widget NOnull(String name, String yourname) {
+  if (name == null || yourname == null) {
+    return SizedBox(
+      child: RaisedButton(
+        child: Text('결과를 확인해주세요', style: TextStyle(fontSize: 24)),
+        onPressed: () {
+          BuildContext context;
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Secondpage()),
+          );
+        },
+        color: Colors.green,
+        textColor: Colors.white,
+      ),
+    );
+  } else {
+    return null;
+  }
 }
 
 // ignore: missing_return

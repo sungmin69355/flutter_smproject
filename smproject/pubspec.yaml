@@ -42,7 +42,14 @@ flutter:
   assets:
     - image/
 
-
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_admob: ^0.9.3+2
+    flutter:
+    sdk: flutter
+  firebase_core: ^0.2.5 
+  # add dependency for Firebase Core
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
